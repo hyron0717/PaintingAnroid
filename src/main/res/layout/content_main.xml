@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:minHeight="0dp"
+    android:minWidth="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hyron.painting.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="left|top">
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/select_btn"
+            android:layout_gravity="left|top"
+            android:src="@drawable/select"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/erase_btn"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/select_btn"
+            android:src="@drawable/earse"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/rect_btn"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/erase_btn"
+            android:src="@drawable/rect"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/oval_btn"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/rect_btn"
+            android:src="@drawable/oval"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/line_btn"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/oval_btn"
+            android:src="@drawable/line"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/fill_btn"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/line_btn"
+            android:src="@drawable/fill"/>
+
+        <GridLayout
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_toEndOf="@+id/fill_btn"
+            android:id="@+id/gridLayout"
+            android:layout_alignParentTop="true">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/black_btn"
+                android:background="#000"
+                android:layout_row="0"
+                android:layout_column="1" />
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/yellow_btn"
+                android:background="#ff0"
+                android:layout_row="0"
+                android:layout_column="2" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#f00"
+                android:id="@+id/red_btn"
+                android:layout_row="0"
+                android:layout_column="3" />
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/white_btn"
+                android:background="#fff"
+                android:layout_row="1"
+                android:layout_column="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/green_btn"
+                android:background="#0f0"
+                android:layout_row="1"
+                android:layout_column="2" />
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/blue_btn"
+                android:background="#00f"
+                android:layout_row="1"
+                android:layout_column="3" />
+        </GridLayout>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:id="@+id/thickness_1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/gridLayout"
+            android:src="@drawable/thickness_1"/>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:id="@+id/thickness_2"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/thickness_1"
+            android:src="@drawable/thickness_2"/>
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:id="@+id/thickness_3"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/thickness_2"
+            android:src="@drawable/thickness_3"/>
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:id="@+id/thickness_4"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/thickness_3"
+            android:src="@drawable/thickness_4"/>
+    </RelativeLayout>
+
+    <com.example.hyron.painting.MyCanvas
+        android:layout_width="500dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/canvas"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFFFFFFF"/>
+
+</FrameLayout>

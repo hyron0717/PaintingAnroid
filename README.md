@@ -10,11 +10,11 @@ Button:
 
 Select  --  Click on the shape can select the button, and can change its color and thickness by clicking color and thickness after selected the shape.
 
-	Can move by click and drag it.
+Can move by click and drag it.
 
-	Can pinch to zoom using two finger.
-
-        The shape's line is thicker when it is selected.
+Can pinch to zoom using two finger.
+	
+The shape's line is thicker when it is selected.
 
 Erase   --  Click on the shape to delete, tap and hold can delete all the shapes.
 
